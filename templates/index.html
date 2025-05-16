@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Predicción FGR</title>
+   <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/941/941497.png" />
+
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f9fbfd;
+            background-image: url('https://i.pinimg.com/736x/de/39/b4/de39b4d7272498e1ea40c58e67c2fe3f.jpg');
+            margin: 0;
+            padding: 0;
+            color: #2c3e50;
+        }
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px 35px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .center-icon {
+            display: block;
+            margin: 0 auto 30px auto;
+            width: 90px;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        .btn {
+            background-color: #f6aa91;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 210px;
+            text-align: center;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #ddb695;
+        }
+        /* Estilos para texto informativo */
+        section {
+            margin-bottom: 25px;
+        }
+        section h2 {
+            border-bottom: 2px solid #eecbad;
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+            color: #ec845b;
+        }
+        section p {
+            line-height: 1.6;
+            font-size: 15px;
+            color: #34495e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Análisis Predictivo de Restricción del Crecimiento Fetal</h1>
+        <img src="https://cdn-icons-png.flaticon.com/128/941/941497.png" alt="Icono FGR" class="center-icon">
+
+        <div class="menu">
+            <a href="{{ url_for('manual_prediction') }}" class="btn">Modelo de Predicción por Registro Manual</a>
+            <a href="{{ url_for('batch_prediction') }}" class="btn">Análisis Predictivo con Conjunto de Datos</a>
+        </div>
+
+        <section>
+            <h2>¿Qué es la Restricción del Crecimiento Fetal (FGR)?</h2>
+            <p>La Restricción del Crecimiento Fetal es una condición en la cual un feto no alcanza su tamaño esperado durante el embarazo. Esta restricción puede derivar en complicaciones serias para la salud del bebé, tanto antes como después del nacimiento.</p>
+        </section>
+
+        <section>
+            <h2>¿Por qué es importante detectarla tempranamente?</h2>
+            <p>Detectar la FGR a tiempo permite tomar medidas médicas adecuadas para mejorar los resultados perinatales, como monitoreo intensivo, planificación del parto y tratamientos oportunos. La detección precoz puede reducir riesgos de mortalidad y problemas de desarrollo a largo plazo.</p>
+        </section>
+
+        <section>
+            <h2>¿Cómo ayuda el análisis predictivo?</h2>
+            <p>El análisis predictivo utiliza datos clínicos y modelos estadísticos o de inteligencia artificial para anticipar la presencia de FGR. Esto mejora la precisión en el diagnóstico, optimiza los recursos médicos y permite un seguimiento personalizado de cada embarazo.</p>
+        </section>
+
+    </div>
+    
+</body>
+</html>
